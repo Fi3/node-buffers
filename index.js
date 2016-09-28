@@ -182,7 +182,8 @@ Buffers.prototype.pos = function (i) {
 Buffers.prototype.get = function get (i) {
     var pos = this.pos(i);
 
-    return this.buffers[pos.buf].get(pos.offset);
+    //return this.buffers[pos.buf].get(pos.offset);
+    return this.buffers[pos.buf][pos.offset];//TODO open issue at github.com/substack/node-buffers/issues/16 remove this file from git when issue will be solved
 };
 
 Buffers.prototype.set = function set (i, b) {
